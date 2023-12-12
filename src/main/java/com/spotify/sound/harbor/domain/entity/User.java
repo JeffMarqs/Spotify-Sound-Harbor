@@ -2,6 +2,8 @@ package com.spotify.sound.harbor.domain.entity;
 
 import java.util.List;
 
+import org.springframework.lang.Nullable;
+
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
@@ -17,16 +19,13 @@ import lombok.Setter;
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class User {
 	
-	private String country;
+	@Nullable
 	private String displayName;
-	private String email;
-	private ExplicitContent explicitContent;
 	private ExternalUrls externalUrls;
 	private Followers followers;
 	private String href;
 	private String id;
 	private List<Images> images;
-	private String product;
 	private String type;
 	private String url;
 
