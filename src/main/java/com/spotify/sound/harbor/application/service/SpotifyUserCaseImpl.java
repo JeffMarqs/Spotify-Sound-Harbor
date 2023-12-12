@@ -14,9 +14,9 @@ public class SpotifyUserCaseImpl implements SpotifyUserCase {
 	SpotifyPortOut spotifyPortOut;
 
 	@Override
-	public UserDTO getUser(String authorization, String userId) {
-		var user = spotifyPortOut.getUser(authorization, userId);
-		var userDTO = new UserDTO(user.getDisplayName(), user.getType(), user.getId(), user.getUrl());
+	public UserDTO getUser(String authorization) {
+		var user = spotifyPortOut.getUser(authorization);
+		var userDTO = new UserDTO(user.getDisplayName(), user.getCountry(), user.getEmail(), user.getType(), user.getId(), user.getUrl());
 		return userDTO;
 	}
 

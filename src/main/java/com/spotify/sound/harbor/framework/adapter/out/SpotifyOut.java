@@ -14,9 +14,9 @@ public class SpotifyOut implements SpotifyPortOut {
 	SpotifyClient spotifyClient;
 
 	@Override
-	public User getUser(String authorization, String userId) {
+	public User getUser(String authorization) {
 		
-		var user = spotifyClient.getUser(authorization, userId);
+		var user = spotifyClient.getUser(authorization);
 		return user;
 	}
 

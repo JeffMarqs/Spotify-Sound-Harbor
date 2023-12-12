@@ -4,6 +4,6 @@ import com.spotify.sound.harbor.domain.entity.User;
 
 public interface SpotifyPortOut {
 
-	User getUser(String authorization, String userId);
+	User getUser(String authorization);
 
 }
